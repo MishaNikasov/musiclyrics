@@ -57,6 +57,7 @@ dependencies {
     implementation project(":core:theme")
     implementation project(":core:presentation")
     implementation project(":data")
+    implementation project(":domain")
 
     implementation Libs.Android.CoreKtx
     implementation Libs.Android.AppCompat
@@ -67,6 +68,7 @@ dependencies {
     implementation Libs.Android.LifecycleViewModelCompose
 
     implementation Libs.Compose.Activity
+    implementation Libs.Compose.Navigation
     implementation Libs.Compose.UI
     implementation Libs.Compose.UiToolingPreview
     debugImplementation Libs.Compose.UiTooling

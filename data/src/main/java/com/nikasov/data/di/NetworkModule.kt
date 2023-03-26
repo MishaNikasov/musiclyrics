@@ -6,6 +6,7 @@ import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.nikasov.data.api.MusixmatchApi
+import com.nikasov.data.interceptor.MusixmatchInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,6 +47,7 @@ class NetworkModule {
             .connectTimeout(GENERAL_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(GENERAL_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(GENERAL_TIMEOUT, TimeUnit.SECONDS)
+            .addInterceptor(MusixmatchInterceptor())
             .addInterceptor(chuckerInterceptor)
 
         return builder.build()
